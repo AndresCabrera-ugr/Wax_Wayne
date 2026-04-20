@@ -2,18 +2,18 @@
 
 ### Ideación 
 * Malla receptora de información 
-* Mapa de empatía
+* Mapa de empatía [Mapa de empatía 1](./Empathy Customer Map Julián Calvo.pdf), [Mapa de empatía 2](./Empathy Customer Map Alejandra Fernández.pdf) [Mapa de empatía 3](./Empathy Customer Map Exp Propia.pdf)
 * Point of View 
 
 
 ### PROPUESTA DE VALOR
-* ScopeCanvas
+* ScopeCanvas [Scope canvas](./Scope Canvas (Community).fig) [PDF](./P2.pdf)
 
 
 ### TASK ANALYSIS
 
 * User Task Matrix 
-* User/Task flow
+* User/Task flow 
 
 
 ### ARQUITECTURA DE INFORMACIÓN
