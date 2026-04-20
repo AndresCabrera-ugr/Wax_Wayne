@@ -2,7 +2,7 @@
 
 ### Ideación 
 * Malla receptora de información 
-* Mapa de empatía [Mapa de empatía 1](./EmpathyCustomerMapJuliánCalvo.pdf), [Mapa de empatía 2](./P2/EmpathyCustomerMapAlejandraFernandez.png) [Mapa de empatía 3](./EmpathyCustomerMapExpPropia.pdf)
+* Mapa de empatía [Mapa de empatía 1](./EmpathyCustomerMapJuliánCalvo.pdf), [Mapa de empatía 2](./P2/EmpathyCustomerMapAlejandraFernandez.png), [Mapa de empatía 3](./EmpathyCustomerMapExpPropia.pdf)
 * Point of View 
 
 
