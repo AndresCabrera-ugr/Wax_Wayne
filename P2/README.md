@@ -2,28 +2,29 @@
 
 ### Ideación 
 * Malla receptora de información 
-* Mapa de empatía [Mapa de empatía 1](./EmpathyCustomerMapJuliánCalvo.pdf), [Mapa de empatía 2](./EmpathyCustomerMap AlejandraFernández.pdf) [Mapa de empatía 3](./EmpathyCustomerMapExpPropia.pdf)
+* Mapa de empatía [Mapa de empatía 1](./EmpathyCustomerMapJuliánCalvo.pdf), [Mapa de empatía 2](./P2/EmpathyCustomerMapAlejandraFernandez.png) [Mapa de empatía 3](./EmpathyCustomerMapExpPropia.pdf)
 * Point of View 
 
 
 ### PROPUESTA DE VALOR
-* ScopeCanvas [Scope canvas](./Scope Canvas (Community).fig) [PDF](./P2.pdf)
+* ScopeCanvas [Scope canvas](./ScopeCanvas.fig) [PDF](./P2.pdf)
 
 
 ### TASK ANALYSIS
 
 * User Task Matrix 
-* User/Task flow 
+* User/Task flow [PDF](./P2.pdf)
 
 
 ### ARQUITECTURA DE INFORMACIÓN
 
 * Sitemap 
-* Labelling 
+* Labelling [PDF](./P2.pdf)
 
 
 ### Prototipo Lo-FI Wireframe 
-
+[Wireframe](./Wireframe.fig)
+[Prototipo](./Prototipo.fig)
 
 ### Conclusiones  
 (incluye valoración de esta etapa)
