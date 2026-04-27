@@ -25,6 +25,7 @@
 ### Prototipo Lo-FI Wireframe 
 [Wireframe](./Wireframe.fig)
 [Prototipo](./Prototipo.fig)
+
 Tras los cambios sugeridos por el profesor hemos añadido maás opciones para interactuar con las paginas del [Prototipo mejorado](./Prototipo_corregido.fig)
 
 ### Conclusiones  
