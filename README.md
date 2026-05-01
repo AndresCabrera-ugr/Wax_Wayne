@@ -136,7 +136,16 @@ Puntos débiles:
 - Formularios con carencias, especialmente en la validación de formatos de entrada y en la provisión de instrucciones contextuales.
 
 Conclusión:
-Aunque la web de La Qarmita destaca por su claridad visual inicial y una estructura de navegación técnica muy bien resuelta, falla en lo más operativo: ayudar al usuario a encontrar lo que busca. Es imprescindible rediseñar por completo la función de búsqueda e integrar mejor las funcionalidades con los objetivos reales de los clientes. Mejorar la flexibilidad de navegación y el sistema de ayuda transformaría una web meramente informativa en una herramienta útil y funcional, aumentando drásticamente la satisfacción del usuario.
+Hemos llegado a la conclusión, de que, si bien la página web puede cumplir su función, muchos de sus sistemas deberían ser mejorados en varios aspectos. La experiencia para el usuario puede llegar a ser poco intuitiva debido a su interfaz, cuya claridad deja que desear en determinadas ocasiones.
+
+Asimismo, no estaría demás implementar otras funcionalidades que se podrían esperar en este tipo de páginas como puede ser un buscador para los contenidos (libros, café, dulces…) y eventos.
+
+Además, debería tenerse en cuenta la posibilidad de integrar la antigua página web en la nueva, de forma que sólo exista una única página web a la que se puedan referir los usuarios. 
+
+De la misma manera, todos los contenidos de la web deberían tener información actualizada sobre la cafetería, para que los usuarios puedan obtenerla de manera inmediata sin tener que navegar por la información que aparece al buscar la cafetería en el buscador.
+
+Analizando usuarios que puedan acceder a la página web, se puede deducir que alguien con poca soltura con las redes sociales o internet, puede llegar a perderse debido a la disposición de la página web.
+
 
 <br>
 
