@@ -28,7 +28,7 @@ Logotipo:
 
 Miembros y nombre del equipo:
  * :bust_in_silhouette:  Alberto Fernández-Pacheco Sánchez-Migallón     :octocat: [@albertofpsm](https://github.com/albertofpsm)  
- * :bust_in_silhouette:  Andrés Cabrera López     :octocat: AndresCabrera-ugr
+ * :bust_in_silhouette:  Andrés Cabrera López     :octocat: Mi GitHub: [@AndresCabrera-ugr](https://github.com/AndresCabrera-ugr)
 
 >>> Los equipos son de 2 personas. Identifícaros con el nombre del Grupo y los enlaces a los perfiles de GitHub de cada integrante
 
