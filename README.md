@@ -30,8 +30,6 @@ Miembros y nombre del equipo:
  * :bust_in_silhouette:  Alberto Fernández-Pacheco Sánchez-Migallón     :octocat: [@albertofpsm](https://github.com/albertofpsm)  
  * :bust_in_silhouette:  Andrés Cabrera López     :octocat: Mi GitHub: [@AndresCabrera-ugr](https://github.com/AndresCabrera-ugr)
 
->>> Los equipos son de 2 personas. Identifícaros con el nombre del Grupo y los enlaces a los perfiles de GitHub de cada integrante
-
 ----- 
 
 <br>
@@ -46,36 +44,76 @@ Miembros y nombre del equipo:
 
 ## Paso 1. UX User & Desk Research & Analisis 
 
->>> Cualquier título puede ser adaptado. Recuerda borrar estos comentarios del template en tu documento
-
 
 ### 1.a User Reseach Plan
 ![Método UX](img/Competitive.png) 
 -----
-
->>> Describe el plan en tu User Research (cómo se plantea la selección de usuarios). Borra esta línea cuando lo tengas.  
+El objetivo es analizar la página web de la cafetería – librería “La Qarmita” para saber si es intuitiva, así como capacidad para hacer reservas, acceder a información de eventos y otras herramientas que pueden ser útiles para la experiencia del usuario. La experiencia del equipo en el desarrollo de páginas web es reducida, con control reducido en html y css.
+Para realizar el análisis se realizará una revisión basada en principios generales de usabilidad, utilizando un checklist que permita evaluar la navegación en la página, el apartado visual, la accesibilidad, etc. Esto nos permitirá conseguir posibilidades para mejorar la web.
+ 
 
 
 ### 1.b Competitive Analysis
 ![Método UX](img/Competitive.png) 
 -----
-
->>> Describe brevemente características de las aplicaciones que tiene asignadas tu grupo. Decidete por una y explica por qué se ha seleccionado. Borra esta línea cuando lo tengas. 
-
+Competidores: 
+-	La Buena Vida – Café del Libro (Madrid)
+-	Mansilla Libros y Café (Madrid)
+<img width="886" height="513" alt="image" src="https://github.com/user-attachments/assets/4e7a9a5b-efbb-4363-8c7e-01cdf80b40d8" />
 
 ### 1.c Personas
 ![Método UX](img/Persona.png) 
 -----
+<img width="884" height="560" alt="image" src="https://github.com/user-attachments/assets/c2799917-3651-47ae-98eb-8141b5db9237" />
+Julián Calvo es un profesor de 31 años, introvertido y reflexivo, apasionado por la filosofía y la enseñanza. Disfruta de la literatura y el cine clásico, y busca espacios tranquilos donde leer y compartir ideas. Le preocupan los cambios en la educación, especialmente el impacto de la inteligencia artificial y la atención de las nuevas generaciones.
 
->>> Junto con la captura de pantalla de la ficha de la persona, haz una breve descripción de la misma. Recuerda que son dos. Los recursos de imagen deberán estar dentro de la carpeta P1/ Cuando termines, borra esta línea.  
-
+<img width="886" height="559" alt="image" src="https://github.com/user-attachments/assets/342dfa1c-18f7-4ac2-8c64-39c43ce21d6b" />
+Alejandra Fernández es una joven de 23 años, sociable y abierta, que recientemente se ha mudado a Granada. Le gusta la literatura fantástica y la vida social, y busca conocer gente nueva con intereses similares. Le preocupa no encontrar amistades reales ni estabilidad laboral, y utiliza la tecnología de forma básica para relacionarse y acceder a sus intereses.
 
 ### 1.d User Journey Map
 ![Método UX](img/JourneyMap.png) 
 ----
+<img width="885" height="671" alt="image" src="https://github.com/user-attachments/assets/66396b55-a9aa-4cbd-bedd-bc7380ae57b5" />
 
->>> Describe el porqué de las dos experiencias de usuario contadas en el journey map. Por ejemplo, reflexiona si te parece que son habituales. Enlaza con los recursos journey que están en la carpeta P1/. Borra esta linea del template cuando termines.  
+Julián busca una cafetería tranquila en Granada donde poder leer y pasar tiempo con amigos, y descubre la web del local recomendado por un estudiante. Al entrar, la experiencia inicial es positiva y le parece interesante. Sin embargo, cuando intenta encontrar información clave como los horarios, el proceso se vuelve lento y confuso. Finalmente descubre que los horarios están desactualizados, lo que le genera frustración y desconfianza. Ante esta incertidumbre, decide abandonar la web.
 
+Este caso muestra cómo una primera impresión positiva puede verse afectada por problemas básicos de mantenimiento y usabilidad. Aunque la web cumple su función informativa inicial, la falta de actualización y claridad en la información clave deteriora la experiencia del usuario, especialmente cuando tiene poco tiempo.
+
+Los principales problemas detectados son:
+
+- Información desactualizada (horarios), que genera desconfianza.
+- Tiempos de carga lentos en secciones clave.
+- Diseño poco atractivo visualmente, que dificulta la navegación.
+- Incertidumbre sobre la fiabilidad de la información.
+
+Por lo que proponemos las siguientes mejoras:
+- Actualizar regularmente los horarios y la información relevante.
+- Optimizar la velocidad de carga de la web.
+- Mejorar el diseño visual para hacerlo más claro y atractivo.
+- Asegurar que la información importante sea fácilmente accesible y fiable.
+
+En general, la web de la cafetería tiene potencial para atraer a usuarios como Julián, pero necesita mejorar la actualización de contenidos y la experiencia de uso para evitar que los usuarios abandonen antes de completar su objetivo.
+
+<img width="885" height="706" alt="image" src="https://github.com/user-attachments/assets/78ef381d-deff-4db6-8ec4-dea1786bf0c9" />
+Alejandra Fernández se ha mudado recientemente a Granada y busca una cafetería tranquila con libros donde pueda conocer gente y compartir su hobby. Encuentra la web del local a través de un anuncio en Instagram y, aunque inicialmente le parece interesante, su experiencia comienza a decaer al navegar desde su portátil. Se encuentra con una página visualmente poco agradable y una estructura de menús confusa. La mayor frustración llega al intentar buscar libros de su interés: la falta de un buscador la obliga a perder mucho tiempo navegando manualmente por los menús. Aunque finalmente encuentra lo que busca y valora positivamente la claridad de los eventos, abandona la web con la sensación de que la plataforma es confusa y difícil de usar.
+
+Este caso muestra cómo una propuesta de valor atractiva (un espacio de lectura y socialización) puede verse comprometida por una interfaz digital deficiente. La falta de herramientas básicas de navegación, como un buscador, y una estética descuidada generan frustración en el usuario, restando profesionalidad a la marca y dificultando el acceso a la información clave.
+
+Los principales problemas detectados son:
+
+- Interfaz visual poco atractiva, lo que genera una experiencia de navegación menos agradable desde el inicio.
+- Navegación ineficiente, obligando al usuario a dar demasiados clics y "pinchar" en secciones separadas (web nueva vs. antigua) para encontrar el contenido.
+- Ausencia de un buscador, lo que provoca pérdida de tiempo y frustración al intentar localizar libros específicos.
+- Falta de claridad general en la disposición de los elementos, lo que confunde al usuario en la etapa final de su visita.
+
+Por lo que proponemos las siguientes mejoras:
+
+- Rediseñar el aspecto visual de la web para hacerla más moderna y acogedora, acorde al ambiente de la cafetería.
+- Implementar un buscador funcional, permitiendo a los usuarios filtrar libros y eventos de manera rápida.
+- Unificar la estructura de navegación, integrando todo el contenido en una sola interfaz coherente para evitar saltos innecesarios.
+- Optimizar el layout o disposición de la web, mejorando la jerarquía de la información para que sea más intuitiva.
+
+En general, el establecimiento ofrece un concepto con mucho potencial para personas nuevas en la ciudad, pero necesita optimizar urgentemente su presencia digital para que la dificultad de uso de la web no se convierta en una barrera para atraer a nuevos clientes.
 
 ### 1.e Usability Review
 ![Método UX](img/usabilityReview.png) 
