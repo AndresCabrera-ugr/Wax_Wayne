@@ -118,11 +118,25 @@ En general, el establecimiento ofrece un concepto con mucho potencial para perso
 ### 1.e Usability Review
 ![Método UX](img/usabilityReview.png) 
 ----
+La Qarmita presenta una plataforma con una base sólida en cuanto a diseño de página de inicio y señalización de navegación, ofreciendo una estructura clara que permite al usuario saber dónde se encuentra en todo momento. Sin embargo, la experiencia se ve seriamente comprometida cuando el usuario intenta realizar tareas específicas o búsquedas concretas, ya que las funcionalidades principales y el sistema de búsqueda son prácticamente inexistentes o ineficaces.
 
->>>  El objetivo es revisar la usabilidad del competidor seleccionado. Usamos un checklist de verificación. Tras usarlo, subelo a la carpeta P1/ Ofrece aquí un parrafo para:
->>> - Enlace al documento:  (xls/pdf) 
->>> - URL y Valoración numérica obtenida: 
->>> - Comentario sobre la revisión:  (puntos fuertes y débiles detectados)
+Puntos fuertes:
+
+- Excelente página de inicio, que ofrece un resumen muy claro del contenido y las funcionalidades disponibles.
+- Navegación estándar muy robusta, con un uso excelente de enlaces descriptivos, soporte para funciones del navegador (atrás/adelante) e indicadores de ubicación actual (breadcrumbs).
+- Gestión de errores eficiente, con mensajes claros, concisos y una buena capacidad de recuperación tras un fallo.
+- Control y feedback adecuado, proporcionando respuestas claras a las acciones del usuario y permitiendo deshacer o cancelar procesos.
+
+Puntos débiles:
+
+- Sistema de búsqueda crítico, con una calificación de "muy pobre" en todos sus apartados; no es intuitivo, no ofrece resultados relevantes ni filtros adecuados.
+- Funcionalidades mal alineadas con los objetivos del usuario, lo que dificulta completar flujos de trabajo deseados o acceder a tareas frecuentes de forma rápida.
+- Falta de flexibilidad en la navegación, ya que no permite buscar o explorar fácilmente por categorías, tipos o nombres.
+- Soporte y ayuda insuficientes, con instrucciones poco claras y sistemas de ayuda online que no facilitan la resolución de dudas durante la navegación.
+- Formularios con carencias, especialmente en la validación de formatos de entrada y en la provisión de instrucciones contextuales.
+
+Conclusión:
+Aunque la web de La Qarmita destaca por su claridad visual inicial y una estructura de navegación técnica muy bien resuelta, falla en lo más operativo: ayudar al usuario a encontrar lo que busca. Es imprescindible rediseñar por completo la función de búsqueda e integrar mejor las funcionalidades con los objetivos reales de los clientes. Mejorar la flexibilidad de navegación y el sistema de ayuda transformaría una web meramente informativa en una herramienta útil y funcional, aumentando drásticamente la satisfacción del usuario.
 
 <br>
 
