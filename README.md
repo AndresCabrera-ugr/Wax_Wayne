@@ -17,29 +17,18 @@ Actualizado: 14/01/2026
 ![Método UX](img/caseStudy.png) 
 -----
 
->>> Este documento es el esqueleto del Case Study que explica el proceso de desarrollo de las 5 prácticas de DIU. Aparte de subir cada entrega a PRADO, se debe actualizar y dar formato de informe final a este documento online. Elimine este tipo de texto / comentarios desde la práctica 1 conforme proceda a cada paso
+Grupo: DIU2_Wax&Wayne.  Curso: 2025/26 
 
-
->>> Hay que Publicar de forma incremental "my Case Study" en Github... Es el momento de dejar este documento para que sea evaluado y calificado como parte de la práctica
->>> Documente bien la cabecera y asegurese que ha resumido los pasos realizados para el diseño de su producto
-
-Grupo: DIUx_AABB.  Curso: 2025/26 
-
-Nombre del Proyecto: 
-
->>> Decida el nombre corto de su propuesta en la práctica 2 
+Nombre del Proyecto: Cafetería de fantasía Nº17
 
 Descripción: 
 
->>> Describa la idea de su producto en la práctica 2 
-
 Logotipo: 
-
->>> Si diseña un logotipo para su producto en la práctica 3 pongalo aqui, a un tamaño adecuado. Si diseña un slogan añadalo aquí
+<img width="620" height="620" alt="image" src="https://github.com/user-attachments/assets/194527b4-7679-4849-ab61-2cdffd1bee40" />
 
 Miembros y nombre del equipo:
- * :bust_in_silhouette:  AA     :octocat:     
- * :bust_in_silhouette:  BB     :octocat:
+ * :bust_in_silhouette:  Alberto Fernández-Pacheco Sánchez-Migallón     :octocat:  albertofpsm  
+ * :bust_in_silhouette:  Andrés Cabrera López     :octocat: AndresCabrera-ugr
 
 >>> Los equipos son de 2 personas. Identifícaros con el nombre del Grupo y los enlaces a los perfiles de GitHub de cada integrante
 
