@@ -151,50 +151,51 @@ Analizando usuarios que puedan acceder a la página web, se puede deducir que al
 
 ## Paso 2. UX Design  
 
->>> Cualquier título puede ser adaptado. Recuerda borrar estos comentarios del template en tu documento
-
 ### 2.a Reframing / IDEACION: Feedback Capture Grid / EMpathy map 
 ![Método UX](img/feedback-capture-grid.png) 
 ----
+<img width="972" height="753" alt="image" src="https://github.com/user-attachments/assets/7183b182-5f55-4216-9f86-f78bad8952cb" />
+El usuario busca un refugio cultural en Granada donde disfrutar de un buen café y compartir lecturas, atraído por el concepto de "cafetería con libros". Sin embargo, al entrar en la web actual, se topa con una interfaz visualmente anticuada que no hace justicia al local. La frustración aumenta cuando intenta consultar datos básicos y encuentra horarios desactualizados (como los de 2019), lo que le genera una inseguridad total sobre la disponibilidad real del establecimiento. Además, la falta de un buscador le obliga a navegar por menús poco intuitivos, perdiendo un tiempo valioso intentando localizar libros o eventos específicos. Ante la falta de claridad y la sensación de abandono digital, el usuario termina abandonando la web con molestia.
 
->>> Comenta con un diagrama los aspectos más destacados a modo de conclusion de la práctica anterior. De qué carece la competencia?? Tu diagrama puede ser una figura subida a la carpeta P2/
+Este caso muestra cómo una propuesta con alma y potencial social puede verse empañada por una presencia digital descuidada. La falta de información actualizada y de herramientas de navegación básicas, como un buscador funcional, reducen el atractivo y generan confusión. Esto es común en plataformas que no priorizan la gestión de contenido ni optimizan la experiencia de usuario para facilitar el acceso a la información.
 
+Los principales problemas detectados son:
 
- Interesante | Críticas     
-| ------------- | -------
-  Preguntas | Nuevas ideas
-  
-    
->>> Explica el Problema y plantea una hipótesis. Es decir, explica aquí qué 
->>> se plantea como "propuesta de valor" para un nuevo diseño de aplicación propio
+- Información crítica desactualizada, especialmente horarios de años anteriores, que generan desconfianza e incertidumbre.
+- Ausencia de buscador y filtros, lo que hace que la exploración del catálogo de libros y eventos sea lenta y pesada.
+- Interfaz visual poco atractiva, con un diseño antiguo que no invita a la navegación ni refleja la calidez del local físico.
+- Sistema de ayuda y navegación ineficiente, con instrucciones poco claras y menús que obligan a realizar demasiados pasos.
+
+Por lo que proponemos las siguientes mejoras en Cafetería de Fantasía Nº17:
+
+- Actualizar la información periódicamente, asegurando que los horarios y la agenda cultural estén siempre al día.
+- Implementar un buscador funcional y filtros, facilitando la localización de títulos y actividades por categorías.
+- Rediseñar la interfaz visual, modernizando el aspecto para que sea coherente con la identidad acogedora del local.
+- Optimizar la navegación y la ayuda online, simplificando los flujos de usuario y añadiendo indicaciones claras.
+En general, la propuesta de Cafetería de Fantasía nº17 es excelente para conectar a las personas con la cultura y el territorio, pero necesita mejorar su usabilidad y gestión de contenidos para evitar la pérdida de clientes potenciales antes de que lleguen al local.
 
 
 ### 2.b ScopeCanvas
 ![Método UX](img/ScopeCanvas.png)
 ----
+<img width="736" height="417" alt="image" src="https://github.com/user-attachments/assets/f2e9d78b-53f8-4ebd-ace5-7c1727f71b6b" />
 
->>> Propuesta de valor, pero ahora en vez de un texto es un ScopeCanvas que has subido a P2/ y enlazado desde aqui. Tambien vale una imagen miniatura del recurso.
->>> No olvides que tu propuesta ya tiene un nombre corto y puedes actualizar la cabecera de este archivo
-
-
+Nuestra intención es llevar a cabo la creación de una cafetería con temática de literatura fantástica (género en auge en los últimos años). La intención es que tenga ambientación de diferentes obras y un menú temático, que puede suscitar la curiosidad de las personas con un gusto por alguna obra de este género. De esta manera, podríamos crear un punto de reunión donde la gente se vea incitada a seguir leyendo, y tengan un lugar para compartir sus obras favoritas y hablar de sus últimas lecturas.
 
 ### 2.b User Flow (task) analysis 
 ![Método UX](img/Sitemap.png) 
 -----
+Medio digital
+<img width="729" height="471" alt="image" src="https://github.com/user-attachments/assets/ad97a904-18d4-49cb-a611-1d91b433fdfe" />
 
->>> Definir "User Map" y "Task Flow" ... enlazar desde P2/ y describir brevemente
+Medio presencial
+<img width="732" height="601" alt="image" src="https://github.com/user-attachments/assets/cdbf80dd-2a53-487c-bc49-0eda32d5e390" />
 
 
 ### 2.c IA: Sitemap + Labelling 
 ![Método UX](img/labelling.png) 
 ----
-
->>> Identificar términos para diálogo con usuario (evita el spanglish) y la arquitectura de la información. Es muy apropiado un diagrama tipo sitemap y una tabla que se ampliaría para llevar asociado la columna iconos (tanto para la web como para una app). 
-
-Término | Significado     
-| ------------- | -------
-  Login  | acceder a plataforma
-
+<img width="885" height="290" alt="image" src="https://github.com/user-attachments/assets/811d4e97-b8f4-47af-9671-aa92ea6398f0" />
 
 ### 2.d Wireframes
 ![Método UX](img/Wireframes.png) 
