@@ -200,24 +200,33 @@ Medio presencial
 ### 2.d Wireframes
 ![Método UX](img/Wireframes.png) 
 -----
-
->>> Plantear el diseño del layout para Web/movil (organización y simulación). Describa la herramienta usada 
+Home page
+<img width="941" height="526" alt="image" src="https://github.com/user-attachments/assets/d21aa896-f091-44af-b0b1-b0cbf615c3c8" />
+Página de la librería
+<img width="935" height="527" alt="image" src="https://github.com/user-attachments/assets/da2d7ea5-0293-4fb2-b332-9e8156c6a789" />
+Página de eventos
+<img width="929" height="527" alt="image" src="https://github.com/user-attachments/assets/049f6cf3-4462-4553-8ea4-49e0378ee8c8" />
+Página de la cafetería
+<img width="936" height="526" alt="image" src="https://github.com/user-attachments/assets/d1d41b1e-d1bc-42f0-b732-568c48a8b47c" />
 
 <br>
 
 ## Paso 3. Mi UX-Case Study (diseño)
 
->>> Cualquier título puede ser adaptado. Recuerda borrar estos comentarios del template en tu documento
-
-
 ### 3.a Moodboard
 ![Método UX](img/moodboard.png)
 -----
+<img width="4440" height="3752" alt="Moodboard" src="https://github.com/user-attachments/assets/f5809c7f-b4cc-41c0-964d-1c5ea2ee0bba" />
 
->>> Diseño visual con una guía de estilos visual (moodboard) 
->>> Incluir Logotipo. Todos los recursos estarán subidos a la carpeta P3/
->>> Explique aqui la/s herramienta/s utilizada/s y el por qué de la resolución empleada. Reflexione ¿Se puede usar esta imagen como cabecera de Instagram, por ejemplo, o se necesitan otras?
+El moodboard de Cafetería de fantasía nº17 recoge los principales elementos visuales y estratégicos del proyecto: logotipo, paleta de colores, tipografías, imágenes de inspiración y perfiles de usuario. El logotipo combina la imagen de un libro abierto con una taza de café humeante y estrellas para representar la fusión entre la literatura fantástica y el ritual del café. Las imágenes de marca han sido seleccionadas para reflejar un ambiente acogedor, místico y tranquilo, ideal para la lectura y el intercambio de ideas.
 
+Se ha estructurado el contenido de forma clara y coherente utilizando los elementos visuales definidos para la identidad de marca:
+- Paleta de colores: Se utilizan tonos azul noche y malva para evocar lo imaginario, junto a colores crema y amarillo pergamino que aportan la calidez del papel antiguo y el café.
+- Tipografías: La fuente principal, Cinzel Decorative, aporta un tono místico y elegante que evoca los títulos de libros de fantasía, mientras que la subfuente Cormorant Garamond mantiene el espíritu literario con mayor legibilidad.
+- Imágenes de inspiración: Sirven para definir una estética minimalista basada en tonos tierra y elementos naturales que invitan a la inmersión en la lectura.
+- Perfil de usuario: Se identifican motivaciones como encontrar una comunidad real de lectores y disponer de un espacio de escape de la rutina sin renunciar a la comodidad.
+
+La resolución y el formato están pensados para un entorno digital de presentación, permitiendo visualizar la identidad completa antes de su implementación. Para su uso en redes sociales, sería recomendable adaptar las gráficas a formatos específicos que resalten el ambiente literario y la calidad de los productos.
 
 ### 3.b Landing Page
 ![Método UX](img/landing-page.png) 
