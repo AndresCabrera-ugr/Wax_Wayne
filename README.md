@@ -246,9 +246,12 @@ La resolución y el formato están pensados para un entorno digital de presentac
 ### 3.d Mockup
 ![Método UX](img/mockup.png) 
 ----
+El layout Hi-Fi de la Cafetería de Fantasía Nº17 presenta una interfaz web intuitiva y visualmente inmersiva, centrada en la promoción de una experiencia única que fusiona literatura fantástica, gastronomía temática y eventos culturales. Utilizando herramientas del Foundation Design System, combina una navegación clara con una estética coherente basada en tonos púrpura, dorado y crema que evocan el universo de la fantasía épica. Las tarjetas visuales organizan el contenido en secciones diferenciadas manteniendo una experiencia accesible tanto para lectores habituales como para nuevos visitantes.
 
->>> Consiste en tener un Layout en acción. Un Mockup es un prototipo HTML que permite simular tareas con estilo de IU seleccionado. Muy útil para compartir con stakeholders
-
+<img width="2560" height="1440" alt="Desktop - 1" src="https://github.com/user-attachments/assets/75dfc4a3-b907-48e9-aba0-6d1fd8f42016" />
+<img width="2560" height="1440" alt="Desktop - 2" src="https://github.com/user-attachments/assets/4f780fa1-112f-4aaf-9da3-04481ba547cc" />
+<img width="2532" height="1440" alt="Desktop - 3" src="https://github.com/user-attachments/assets/cb45f761-e53d-4eea-8bd0-fc9c624ee1f4" />
+<img width="2560" height="1440" alt="Desktop - 4" src="https://github.com/user-attachments/assets/cba95a98-9868-4b90-ab68-b365277a956c" />
 
 <br>
 
