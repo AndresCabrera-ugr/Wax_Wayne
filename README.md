@@ -22,7 +22,7 @@ Grupo: DIU2_Wax&Wayne.  Curso: 2025/26
 Nombre del Proyecto: Cafetería de fantasía Nº17
 
 Descripción: 
-La demo es: [DEMO](https://andrescabrera-ugr.github.io/Wax_Wayne/P4/Web/index.html)
+La demo es: [![Demo](https://img.shields.io/badge/Demo-Ver%20ahora-blue?style=for-the-badge)](https://andrescabrera-ugr.github.io/Wax_Wayne/P4/Web/index.html).
 Para entrar a la página funcional pinchar en la palabra DEMO
 
 Logotipo: 
