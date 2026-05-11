@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú — Cafetería de Fantasía Nº17</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple-nav: #3d2b72;
+      --purple-card-bg: #c2b8e8;
+      --purple-item-bg: #b8aee0;
+      --gold-footer: #d4b483;
+      --text-dark: #1a1025;
+      --text-light: #f5f0ff;
+      --btn-bg: #d6ccf0;
+      --btn-text: #2a1a55;
+      --page-bg: #ede8e0;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--page-bg);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      background: var(--purple-nav);
+      display: flex;
+      align-items: center;
+      justify-content: center;          /* centra todo el conjunto */
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+      height: 68px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+
+    .nav-logo {
+      border-radius: 10px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .nav-logo a {
+      display: flex;
+    }
+
+    .nav-logo img {
+      width: 46px;
+      height: 46px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;                      /* compacto, no repartido */
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+    }
+
+    .nav-links a.active {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .nav-links a.active .nav-icon svg {
+      stroke: #fff;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .nav-links a:hover .nav-icon svg { stroke: #fff; }
+
+    .nav-icon {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: rgba(245,240,255,0.85);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.18s;
+    }
+
+    .nav-search {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 6px;
+      flex-shrink: 0;
+      transition: background 0.18s;
+    }
+    .nav-search svg {
+      width: 22px;
+      height: 22px;
+      stroke: rgba(245,240,255,0.85);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .nav-search:hover { background: rgba(255,255,255,0.15); }
+    .nav-search:hover svg { stroke: #fff; }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      flex: 1;
+      padding: 2.5rem 2rem 3rem;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 2.2rem;
+    }
+
+    .menu-header h1 {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #5a4a7a;
+      font-weight: 300;
+    }
+
+    .menu-divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #3d2b72, transparent);
+      margin: 0.8rem auto 0;
+    }
+
+    /* Category tabs */
+    .category-tabs {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .tab-btn {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 0.38rem 1.3rem;
+      border-radius: 3px;
+      border: 1.5px solid var(--purple-nav);
+      background: transparent;
+      color: var(--purple-nav);
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .tab-btn:hover,
+    .tab-btn.active {
+      background: var(--purple-nav);
+      color: #fff;
+    }
+
+    /* Menu list */
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .menu-item {
+      background: var(--purple-item-bg);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      padding: 1.1rem 1.4rem;
+      transition: transform 0.18s, box-shadow 0.18s;
+      animation: fadeIn 0.35s ease both;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(61,43,114,0.18);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-item img {
+      width: 110px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .menu-item-body {
+      flex: 1;
+    }
+
+    .menu-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.45rem;
+      gap: 1rem;
+    }
+
+    .menu-item-name {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 0.78rem;
+      color: var(--text-dark);
+      letter-spacing: 0.03em;
+      line-height: 1.4;
+    }
+
+    .menu-item-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--purple-nav);
+      white-space: nowrap;
+    }
+
+    .menu-item-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: #1e1030;
+    }
+
+    .menu-item-tags {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      border-radius: 2px;
+      background: rgba(61,43,114,0.14);
+      color: #3d2b72;
+      font-weight: 600;
+    }
+
+    /* Hidden items */
+    .menu-item[data-cat].hidden {
+      display: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--gold-footer);
+      padding: 1.1rem 2rem;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.83rem;
+      color: #3a2510;
+    }
+
+    .footer-text a {
+      color: #3a2510;
+      text-decoration: underline;
+      margin: 0 0.25rem;
+    }
+
+    .footer-text a:hover { color: var(--purple-nav); }
+
+    @media (max-width: 680px) {
+      .menu-item img { width: 80px; height: 70px; }
+      .nav-links a { font-size: 0.7rem; }
+      .menu-item-name { font-size: 0.68rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="Logo_DIU.png" alt="Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          Contacto
+        </a>
+      </li>
+      <li>
+        <a href="menu.html" class="active">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </span>
+          Menú
+        </a>
+      </li>
+      <li>
+        <a href="biblioteca.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </span>
+          Biblioteca
+        </a>
+      </li>
+      <li>
+        <a href="eventos.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </span>
+          Eventos
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          Horario
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          Reservas
+        </a>
+      </li>
+    </ul>
+    <span class="nav-search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </span>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <div class="menu-header">
+      <h1>Carta</h1>
+      <div class="menu-divider"></div>
+    </div>
+
+    <!-- Category filter tabs -->
+    <div class="category-tabs">
+      <button class="tab-btn active" data-filter="all">Todo</button>
+      <button class="tab-btn" data-filter="cafe">Cafés</button>
+      <button class="tab-btn" data-filter="te">Tés</button>
+      <button class="tab-btn" data-filter="frio">Fríos</button>
+      <button class="tab-btn" data-filter="especial">Especiales</button>
+    </div>
+
+    <!-- Menu items list -->
+    <div class="menu-list" id="menuList">
+
+      <div class="menu-item" data-cat="cafe">
+        <img src="image.png" alt="Latte del Nigromante" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Latte del Nigromante</span>
+            <span class="menu-item-price">4,50€</span>
+          </div>
+          <p class="menu-item-desc">Café con leche de avena, sirope de caramelo oscuro y una nube de espuma dibujada a mano. Tan oscuro como los secretos del Reino de Aliento.</p>
+          <div class="menu-item-tags"><span class="tag">Café</span><span class="tag">Caliente</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="cafe">
+        <img src="cafellanurasquebradas.png" alt="Café Las Llanuras Quebradas" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Café "Las Llanuras Quebradas"</span>
+            <span class="menu-item-price">3,50€</span>
+          </div>
+          <p class="menu-item-desc">Un espresso doble con un toque de caramelo salado, tan intenso y profundo como los abismos que separan las llanuras de Roshar. Para los que necesitan resistir hasta la próxima alta tormenta.</p>
+          <div class="menu-item-tags"><span class="tag">Café</span><span class="tag">Caliente</span><span class="tag">Intenso</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="cafe">
+        <img src="magogris.png" alt="Cortado Gandalf" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Cortado del Mago Gris</span>
+            <span class="menu-item-price">2,80€</span>
+          </div>
+          <p class="menu-item-desc">Espresso suave con un toque de leche vaporizada y una pizca de canela. Simple y poderoso, como quien pasa desapercibido hasta que más se le necesita.</p>
+          <div class="menu-item-tags"><span class="tag">Café</span><span class="tag">Caliente</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="frio">
+        <img src="sangrelannister.png" alt="Sangre Lannister" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">"Sangre Lannister"</span>
+            <span class="menu-item-price">5,50€</span>
+          </div>
+          <p class="menu-item-desc">Un smoothie de frutas rojas, granada y un toque de hibisco que lo tiñe de un rojo imposible. Tan seductor y peligroso como la familia más odiada y admirada de Poniente. Se sirve frío.</p>
+          <div class="menu-item-tags"><span class="tag">Frío</span><span class="tag">Sin cafeína</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="frio">
+        <img src="arrakis.png" alt="Cold Brew Arrakis" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Cold Brew de Arrakis</span>
+            <span class="menu-item-price">4,20€</span>
+          </div>
+          <p class="menu-item-desc">Café frío de extracción lenta con cardamomo y una pizca de cúrcuma. Tan valioso como la especia misma. Quien controla el café, controla el universo.</p>
+          <div class="menu-item-tags"><span class="tag">Frío</span><span class="tag">Café</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="te">
+        <img src="terivendell.png" alt="Té Rivendell" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Té "Rivendell"</span>
+            <span class="menu-item-price">3,99€</span>
+          </div>
+          <p class="menu-item-desc">Una mezcla de manzanilla, lavanda y menta que evoca los jardines élficos del último refugio seguro. Se sirve en tetera individual con un toque de miel del campo.</p>
+          <div class="menu-item-tags"><span class="tag">Té</span><span class="tag">Sin cafeína</span><span class="tag">Caliente</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="te">
+        <img src="teverdedeldoblado.png" alt="Té Verde del Doblado" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Té Verde del Doblado</span>
+            <span class="menu-item-price">3,50€</span>
+          </div>
+          <p class="menu-item-desc">Matcha ceremonial batido con leche de coco y un toque de jengibre. Para quienes doblan la realidad con cada sorbo. Verde como los prados de Valles Manantiales.</p>
+          <div class="menu-item-tags"><span class="tag">Té</span><span class="tag">Caliente</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="especial">
+        <img src="pocionalquimista.png" alt="Poción del Alquimista" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Poción del Alquimista</span>
+            <span class="menu-item-price">6,20€</span>
+          </div>
+          <p class="menu-item-desc">Espresso, leche de pistache, mariposas de guisante azul y espuma de vainilla que cambia de color al añadir el limón. Magia real en cada taza. Solo para valientes.</p>
+          <div class="menu-item-tags"><span class="tag">Especial</span><span class="tag">Café</span><span class="tag">Caliente</span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="especial">
+        <img src="chocolate.png" alt="Chocolate Oscuro del Abismo" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Chocolate Oscuro del Abismo</span>
+            <span class="menu-item-price">5,00€</span>
+          </div>
+          <p class="menu-item-desc">Chocolate negro 85%, guindilla y sal negra del Himalaya. Profundo y perturbador como los mares entre mundos. Sólo para quienes se atreven a mirar al fondo.</p>
+          <div class="menu-item-tags"><span class="tag">Especial</span><span class="tag">Sin cafeína</span><span class="tag">Caliente</span></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-text">
+      © Cafetería de Fantasía Nº17 &nbsp;·&nbsp;
+      <a href="#">Términos y condiciones</a> ·
+      <a href="#">Privacidad y Seguridad</a> ·
+      <a href="#">Aviso Legal</a> ·
+      <a href="#">Política de Cookies</a>
+    </p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const items = document.querySelectorAll('.menu-item');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        items.forEach((item, i) => {
+          const match = filter === 'all' || item.dataset.cat === filter;
+          if (match) {
+            item.classList.remove('hidden');
+            item.style.animationDelay = (i * 0.05) + 's';
+            // re-trigger animation
+            item.style.animation = 'none';
+            item.offsetHeight;
+            item.style.animation = '';
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html

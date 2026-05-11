@@ -14,7 +14,10 @@
       --gold-footer: #d4b483;
       --text-dark: #1a1025;
       --text-light: #f5f0ff;
-      --btn-bg: #d6ccf0;
+      /* Botones: gama crema/beige/dorado de la imagen de referencia */
+      --btn-bg-light: #f5f0e8;   /* crema blanco */
+      --btn-bg-mid:   #f0e6cc;   /* crema cálido */
+      --btn-bg-gold:  #d4a843;   /* dorado */
       --btn-text: #2a1a55;
     }
 
@@ -30,6 +33,8 @@
       background: var(--purple-nav);
       display: flex;
       align-items: center;
+      justify-content: center;          /* centra todo el conjunto */
+      gap: 1.5rem;
       padding: 0 1.5rem;
       height: 68px;
       position: sticky;
@@ -49,6 +54,10 @@
       overflow: hidden;
     }
 
+    .nav-logo a {
+      display: flex;
+    }
+
     .nav-logo img {
       width: 46px;
       height: 46px;
@@ -59,10 +68,8 @@
     .nav-links {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-      flex: 1;
+      gap: 0.3rem;                      /* compacto, no repartido */
       list-style: none;
-      padding: 0 1rem;
     }
 
     .nav-links a {
@@ -76,9 +83,10 @@
       font-size: 0.82rem;
       font-weight: 400;
       letter-spacing: 0.04em;
-      padding: 0.4rem 0.7rem;
+      padding: 0.4rem 0.85rem;
       border-radius: 6px;
       transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -86,9 +94,7 @@
       color: #fff;
     }
 
-    .nav-links a:hover .nav-icon svg {
-      stroke: #fff;
-    }
+    .nav-links a:hover .nav-icon svg { stroke: #fff; }
 
     .nav-icon {
       width: 22px;
@@ -127,9 +133,7 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .nav-search:hover {
-      background: rgba(255,255,255,0.15);
-    }
+    .nav-search:hover { background: rgba(255,255,255,0.15); }
     .nav-search:hover svg { stroke: #fff; }
 
     /* ── HERO ── */
@@ -162,14 +166,17 @@
       position: relative;
       text-align: center;
       padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
 
     .hero-title-box {
-      background: rgba(238, 232, 215, 0.85);
+      background: rgba(238, 232, 215, 0.5);
       padding: 0.5rem 2.2rem;
       display: inline-block;
-      margin-bottom: 1.2rem;
-      border-radius: 2px;
+      border-radius: 10px;
     }
 
     .hero-title {
@@ -181,12 +188,16 @@
     }
 
     .hero-subtitle {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cinzel Decorative', serif;
       font-size: 0.82rem;
-      color: var(--text-light);
+      color: var(--text-dark);
       letter-spacing: 0.2em;
-      font-weight: 300;
+      font-weight: 700;
       text-transform: uppercase;
+      background: rgba(238, 232, 215, 0.5);
+      padding: 0.5rem 2.2rem;
+      border-radius: 10px;
+      display: inline-block;
     }
 
     /* ── CARDS ── */
@@ -202,6 +213,8 @@
       margin: 0 auto;
     }
 
+    /* Cada card usa flex column con justify-content space-between
+       para empujar el botón siempre al fondo */
     .card {
       background: var(--purple-card-bg);
       border-radius: 6px;
@@ -219,15 +232,17 @@
       line-height: 1.4;
     }
 
+    /* El body crece para empujar el botón */
     .card-body {
       display: flex;
       gap: 0.9rem;
       align-items: flex-start;
+      flex: 1;                          /* ocupa el espacio restante */
     }
 
     .card-img {
-      width: 80px;
-      height: 90px;
+      width: 160px;
+      height: 250px;
       object-fit: cover;
       border-radius: 4px;
       flex-shrink: 0;
@@ -241,9 +256,12 @@
       font-weight: 400;
     }
 
+    /* Botón con los tres niveles de color de la imagen:
+       blanco crema → crema cálido → dorado.
+       Usamos el intermedio como default y dorado en hover. */
     .card-btn {
       align-self: center;
-      background: var(--btn-bg);
+      background: var(--btn-bg-mid);
       color: var(--btn-text);
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.85rem;
@@ -254,11 +272,11 @@
       padding: 0.38rem 1.5rem;
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
-      margin-top: 0.2rem;
+      margin-top: auto;
     }
 
     .card-btn:hover {
-      background: var(--purple-nav);
+      background: var(--btn-bg-gold);
       color: #fff;
     }
 
@@ -286,8 +304,8 @@
     @media (max-width: 680px) {
       .cards-grid { grid-template-columns: 1fr; }
       .hero-title { font-size: 1.1rem; }
-      .nav-links { gap: 1rem; }
-      .nav-links a { font-size: 0.7rem; }
+      nav { gap: 0.5rem; }
+      .nav-links a { font-size: 0.7rem; padding: 0.4rem 0.5rem; }
     }
   </style>
 </head>
@@ -296,7 +314,9 @@
   <!-- NAVBAR -->
   <nav>
     <div class="nav-logo">
-      <img src="Logo_DIU.png" alt="Logo" />
+      <a href="index.html">
+        <img src="Logo_DIU.png" alt="Logo" />
+      </a>
     </div>
     <ul class="nav-links">
       <li>
@@ -308,7 +328,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="menu.html">
           <span class="nav-icon">
             <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </span>
@@ -316,7 +336,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="biblioteca.html">
           <span class="nav-icon">
             <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </span>
@@ -324,7 +344,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="eventos.html">
           <span class="nav-icon">
             <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </span>
@@ -355,7 +375,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img class="hero-bg" src="cafellanurasquebradas.png" alt="Cafetería de fantasía" />
+    <img class="hero-bg" src="Fondo.png" alt="Cafetería de fantasía" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-title-box">
@@ -384,7 +404,7 @@
       <div class="card">
         <h2 class="card-title">Libro Recomendado</h2>
         <div class="card-body">
-          <img class="card-img" src="asedioytormenta.png" alt="El Archivo de las Tormentas" />
+          <img class="card-img" src="Elcaminodelosreyes.png" alt="El Archivo de las Tormentas" />
           <p class="card-text">
             El primero de la saga "El Archivo de las Tormentas". Un mundo devastado
             por tormentas eternas, donde guerreros y esclavos convergen en un destino épico.
@@ -398,7 +418,7 @@
         <div class="card-body">
           <img class="card-img" src="alexelcapito.png" alt="Evento fantasía" />
           <p class="card-text">
-            Ven a debatir sobre los sistemas de magia más elaborados de la fantasía moderna.
+            Ven a debatir sobre los sistemas de magia más elaborados de la fantasía moderna con nuestro invitado especial Alexelcapo.
           </p>
         </div>
         <button class="card-btn">Ver más</button>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biblioteca — Cafetería de Fantasía Nº17</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple-nav: #3d2b72;
+      --purple-card-bg: #c2b8e8;
+      --gold-footer: #d4b483;
+      --text-dark: #1a1025;
+      --text-light: #f5f0ff;
+      --btn-bg-mid: #f0e6cc;
+      --btn-bg-gold: #d4a843;
+      --btn-text: #2a1a55;
+      --page-bg: #ede8e0;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--page-bg);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      background: var(--purple-nav);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+      height: 68px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+
+    .nav-logo {
+      border-radius: 10px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .nav-logo a {
+        display: flex;
+    }
+
+    .nav-logo img {
+      width: 46px;
+      height: 46px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .nav-links a.active .nav-icon svg,
+    .nav-links a:hover .nav-icon svg { stroke: #fff; }
+
+    .nav-icon {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: rgba(245,240,255,0.85);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.18s;
+    }
+
+    .nav-search {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 6px;
+      flex-shrink: 0;
+      transition: background 0.18s;
+    }
+    .nav-search svg {
+      width: 22px;
+      height: 22px;
+      stroke: rgba(245,240,255,0.85);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .nav-search:hover { background: rgba(255,255,255,0.15); }
+    .nav-search:hover svg { stroke: #fff; }
+
+    /* ── MAIN ── */
+    main {
+      flex: 1;
+      padding: 2.5rem 2rem 3rem;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .lib-header {
+      text-align: center;
+      margin-bottom: 2.2rem;
+    }
+
+    .lib-header h1 {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .lib-header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #5a4a7a;
+      font-weight: 300;
+    }
+
+    .lib-divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #3d2b72, transparent);
+      margin: 0.8rem auto 0;
+    }
+
+    /* Grid de cards */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+    }
+
+    .book-card {
+      background: var(--purple-card-bg);
+      border-radius: 6px;
+      padding: 1.2rem 1.2rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: transform 0.18s, box-shadow 0.18s;
+      animation: fadeIn 0.35s ease both;
+    }
+
+    .book-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(61,43,114,0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Stagger */
+    .book-card:nth-child(1) { animation-delay: 0.05s; }
+    .book-card:nth-child(2) { animation-delay: 0.10s; }
+    .book-card:nth-child(3) { animation-delay: 0.15s; }
+    .book-card:nth-child(4) { animation-delay: 0.20s; }
+    .book-card:nth-child(5) { animation-delay: 0.25s; }
+    .book-card:nth-child(6) { animation-delay: 0.30s; }
+    .book-card:nth-child(7) { animation-delay: 0.35s; }
+    .book-card:nth-child(8) { animation-delay: 0.40s; }
+    .book-card:nth-child(9) { animation-delay: 0.45s; }
+
+    .book-card-title {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 0.72rem;
+      color: var(--text-dark);
+      letter-spacing: 0.04em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .book-card-body {
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      flex: 1;
+    }
+
+    .book-card-img {
+      width: 80px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 3px;
+      flex-shrink: 0;
+      box-shadow: 2px 3px 10px rgba(0,0,0,0.25);
+    }
+
+    .book-card-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #1e1030;
+    }
+
+    .book-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      gap: 0.6rem;
+    }
+
+    .book-available {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      color: #3d2b72;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .book-btn {
+      background: var(--btn-bg-mid);
+      color: var(--btn-text);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border: none;
+      border-radius: 3px;
+      padding: 0.35rem 1.2rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .book-btn:hover {
+      background: var(--btn-bg-gold);
+      color: #fff;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--gold-footer);
+      padding: 1.1rem 2rem;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.83rem;
+      color: #3a2510;
+    }
+
+    .footer-text a {
+      color: #3a2510;
+      text-decoration: underline;
+      margin: 0 0.25rem;
+    }
+
+    .footer-text a:hover { color: var(--purple-nav); }
+
+    @media (max-width: 860px) {
+      .books-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .books-grid { grid-template-columns: 1fr; }
+      nav { gap: 0.5rem; }
+      .nav-links a { font-size: 0.7rem; padding: 0.4rem 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="Logo_DIU.png" alt="Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          Contacto
+        </a>
+      </li>
+      <li>
+        <a href="menu.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </span>
+          Menú
+        </a>
+      </li>
+      <li>
+        <a href="biblioteca.html" class="active">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </span>
+          Biblioteca
+        </a>
+      </li>
+      <li>
+        <a href="eventos.html">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </span>
+          Eventos
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          Horario
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          Reservas
+        </a>
+      </li>
+    </ul>
+    <span class="nav-search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </span>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <div class="lib-header">
+      <h1>Biblioteca</h1>
+      <div class="lib-divider"></div>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- 1 -->
+      <div class="book-card">
+        <h2 class="book-card-title">El Señor de los Anillos: La Comunidad del Anillo</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="lacomuniaddelanillo.png" alt="La Comunidad del Anillo" />
+          <p class="book-card-text">
+            El primer volumen de la trilogía. Frodo recibe el Anillo Único y parte desde La Comarca junto a sus amigos hacia la oscura Mordor. La formación de la Comunidad y su travesía por Moria es pura fantasía épica.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 10</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="book-card">
+        <h2 class="book-card-title">El Imperio Final</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="elimperiofinañ.png" alt="El Imperio Final" />
+          <p class="book-card-text">
+            Libro primero de Nacidos de la Bruma. Un grupo de forajidos planea derrocar a un dios inmortal en un mundo oscuro y cenicienta. Sanderson construye aquí su sistema de magia Alumancia, uno de los más ingeniosos de la fantasía moderna.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 12</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="book-card">
+        <h2 class="book-card-title">Juego de Tronos</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="juegodetronos.png" alt="Juego de Tronos" />
+          <p class="book-card-text">
+            El primer libro de Canción de Hielo y Fuego presenta las intrincadas políticas de los Stark, los Lannister y los Baratheon. Establece las reglas crueles de un mundo donde nadie está a salvo y las consecuencias son reales.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 10</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="book-card">
+        <h2 class="book-card-title">El Señor de los Anillos: Las Dos Torres</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="lasdostorres.png" alt="Las Dos Torres" />
+          <p class="book-card-text">
+            Tras la ruptura de la Comunidad, la historia se divide: Frodo y Sam avanzan solos guiados por el ambiguo Gollum, mientras Aragorn, Legolas y Gimli se ven arrastrados a las grandes batallas de Helm's Deep y Isengard.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 10</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="book-card">
+        <h2 class="book-card-title">Palabras Radiantes</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="palabrasradiantes.png" alt="Palabras Radiantes" />
+          <p class="book-card-text">
+            Kaladin lidera la guardia real mientras lucha con su salud y su sentido del honor. Shallan viaja a las Llanuras Quebradas cargada con los secretos de su pasado. Tres caminos que convergen en un mundo sin héroes.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 15</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="book-card">
+        <h2 class="book-card-title">Asedio y Tormenta</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="asedioytormenta.png" alt="Asedio y Tormenta" />
+          <p class="book-card-text">
+            Alina huye con Mal tras los eventos de Sombra y hueso, pero el Oscuro ha regresado con un poder aún más aterrador. Con la ayuda de un carismático corsario, Alina vuelve a Ravka para liderar la resistencia.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 10</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="book-card">
+        <h2 class="book-card-title">El Señor de los Anillos: El Retorno del Rey</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="elretornodelrey.png" alt="El Retorno del Rey" />
+          <p class="book-card-text">
+            El conflicto llega a su clímax con la batalla de los Campos de Pelennor, mientras Frodo y Sam se arrastran exhaustos por las tierras de Mordor hasta los fuegos del Monte del Destino. El fin de una era y el comienzo de otra.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 10</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="book-card">
+        <h2 class="book-card-title">La Voz de las Espadas</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="lavozdelasespadas.png" alt="La Voz de las Espadas" />
+          <p class="book-card-text">
+            El inquisidor Glokta, cínico torturador; el capitán Jezal, vanidoso espadachín; y Logan Nuevededos, bárbaro de sanguinaria reputación. Tres caminos que convergen en un mundo sin héroes, donde la moral es una ilusión y la política es tan sucia como la guerra.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 8</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="book-card">
+        <h2 class="book-card-title">El Nombre del Viento</h2>
+        <div class="book-card-body">
+          <img class="book-card-img" src="elnombredelviento.png" alt="El Nombre del Viento" />
+          <p class="book-card-text">
+            Kvothe, una leyenda viva convertida en tabernero anónimo, narra en primera persona su propia historia: de niño prodigio criado entre actores a huérfano en la calle, de estudiante brillante en la Universidad a mago temido en todo el mundo. Una prosa de una belleza excepcional.
+          </p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-available">Disponibles: 10</span>
+          <button class="book-btn">¡Reserva ya!</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-text">
+      © Cafetería de Fantasía Nº17 &nbsp;·&nbsp;
+      <a href="#">Términos y condiciones</a> ·
+      <a href="#">Privacidad y Seguridad</a> ·
+      <a href="#">Aviso Legal</a> ·
+      <a href="#">Política de Cookies</a>
+    </p>
+  </footer>
+
+</body>
+</html>
