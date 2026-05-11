@@ -23,6 +23,7 @@ Nombre del Proyecto: Cafetería de fantasía Nº17
 
 Descripción: 
 La demo es: [DEMO](https://andrescabrera-ugr.github.io/Wax_Wayne/P4/Web/index.html)
+Para entrar a la página funcional pinchar en la palabra DEMO
 
 Logotipo: 
 <img width="620" height="620" alt="image" src="https://github.com/user-attachments/assets/194527b4-7679-4849-ab61-2cdffd1bee40" />
