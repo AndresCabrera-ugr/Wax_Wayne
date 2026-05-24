@@ -74,12 +74,17 @@ Media Caso A (Cafetería Fantasía): 64.0 — Categoría: OK
 Media Caso B (Anime Ramen): 75.5 — Categoría: Good
 
 El boxplot generado con sus.mixality.de muestra que Anime Ramen obtiene una puntuación media de 75.5, situándose en la franja "Good" de la escala SUS. Cafetería Fantasía se queda en 64, en la zona "OK". Más allá de la media, lo que también llama la atención es la dispersión: Anime Ramen tiene un rango intercuartílico más estrecho, lo que significa que la mayoría de usuarios tuvieron una experiencia bastante similar entre sí. En Cafetería Fantasía la varianza es mayor, con opiniones más dispersas. El valor mínimo de Anime Ramen corresponde a P08, la participante de 77 años, cuya puntuación baja hasta 52.5, lo cual es coherente con su perfil de baja competencia digital.
+![SUS Score](main_plot.png)
 
 Situando ambos diseños en la curva de percentiles, Anime Ramen queda en el percentil 74, lo que significa que supera en usabilidad percibida al 74% de los sistemas que habitualmente se evalúan con esta escala. Cafetería Fantasía se sitúa en el percentil 37, por debajo de la media global. Esto no significa que sea un mal diseño, pero sí indica que hay margen de mejora considerable respecto a estándares de referencia.
+![Percentile Curve](percentile_curve.png)
 
 Mirando pregunta por pregunta, Anime Ramen puntúa por encima en casi todas. Las diferencias más notables aparecen en Q4 y Q5, sobre necesidad de ayuda de un experto e integración de funciones, donde Anime Ramen saca ventaja clara. Esto sugiere que los usuarios lo perciben como más intuitivo y funcionalmente coherente. En Q7, que pregunta si cualquier persona aprendería a usarlo rápido, también hay diferencia a favor de Anime Ramen, algo que encaja con la claridad de su navegación y la prominencia del CTA principal. La única pregunta donde Cafetería Fantasía se acerca es Q6, sobre inconsistencia visual, lo que podría indicar que aunque el diseño es menos usable en términos generales, mantiene cierta coherencia estética que los usuarios valoran.
+![Per Item Chart](per_item.png)
 
 La gráfica de conclusividad refleja la principal limitación del estudio: con 5 usuarios por grupo, la fiabilidad estadística es prácticamente nula, cercana al 1-2%. La curva muestra que para alcanzar un nivel de conclusividad del 75% harían falta entre 8 y 10 usuarios por grupo, y para llegar al 100% se necesitarían alrededor de 12. Esto no invalida los resultados, pero sí obliga a interpretarlos como tendencias orientativas más que como datos concluyentes. En el contexto de una práctica académica con recursos limitados, la muestra es razonable, pero debería ampliarse en un estudio real.
+![Percentile Curve](percentile_curve.png)
+
 ## 4. Análisis de Eye Tracking (Datos Biométricos)
 
 Las pruebas de Eye Tracking se realizaron con GazeMapping, capturando el comportamiento visual de los participantes sobre capturas de pantalla de ambos sitios web. A continuación se presentan los hallazgos del caso B (Anime Ramen).
