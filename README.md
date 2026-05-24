@@ -271,7 +271,7 @@ El caso B asignado es Anime Ramen, una web de restaurante temático inspirado en
 
 Para las pruebas se han reclutado 10 usuarios, distribuidos en 5 para el Caso A (Cafetería Fantasía) y 5 para el Caso B (Anime Ramen)
 
-| Usuarios | Sexo/Edad     | Ocupación   |  Exp.TIC    | Personalidad | Plataforma | Caso
+| Usuarios      | Sexo/Edad| Ocupación   |  Exp.TIC    | Personalidad | Plataforma | Caso
 | ------------- | -------- | ----------- | ----------- | -----------  | ---------- | ----
 | P01           | H / 20   | Estudiante  | Alta        | Introvertido | Web        | A 
 | P02           | H / 20   | Estudiante  | Media       | Timido       | Web        | A 
@@ -303,18 +303,34 @@ Tras la prueba, cada participante rellenó el cuestionario SUS.
 ### 4.c Cuestionario SUS
 ![Método UX](img/Survey.png) 
 ----
+Se administró el cuestionario SUS estándar de 10 preguntas a todos los participantes al finalizar la prueba. Los resultados obtenidos son los siguientes:
 
->>> Como uno de los test para la prueba A/B testing, usaremos el **Cuestionario SUS** que permite valorar la satisfacción de cada usuario con el diseño utilizado (casos A o B). Para calcular la valoración numérica y la etiqueta linguistica resultante usamos la [hoja de cálculo](https://github.com/mgea/DIU19/blob/master/Cuestionario%20SUS%20DIU.xlsx). Previamente conozca en qué consiste la escala SUS y cómo se interpretan sus resultados
-http://usabilitygeek.com/how-to-use-the-system-usability-scale-sus-to-evaluate-the-usability-of-your-website/)
-Para más información, consultar aquí sobre la [metodología SUS](https://cui.unige.ch/isi/icle-wiki/_media/ipm:test-suschapt.pdf)
->>> Adjuntar en la carpeta P4/ el excel resultante y describa aquí la valoración personal de los resultados 
+| Usuarios | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | Score | Caso |
+| -------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --- | ----- | ---- |
+| P01      | 4  | 2  | 4  | 2  | 4  | 2  | 4  | 2  | 4  | 2   | 75.0  | A    |
+| P02      | 4  | 2  | 3  | 2  | 4  | 3  | 4  | 2  | 3  | 2   | 67.5  | A    |
+| P03      | 4  | 1  | 4  | 2  | 4  | 2  | 5  | 2  | 4  | 2   | 80.0  | A    |
+| P04      | 3  | 3  | 3  | 2  | 3  | 3  | 4  | 3  | 3  | 3   | 55.0  | A    |
+| P05      | 3  | 3  | 2  | 3  | 2  | 3  | 3  | 3  | 2  | 3   | 42.5  | A    |
+| P06      | 4  | 2  | 4  | 1  | 5  | 2  | 4  | 2  | 4  | 1   | 82.5  | B    |
+| P07      | 4  | 2  | 4  | 2  | 4  | 2  | 4  | 2  | 4  | 2   | 75.0  | B    |
+| P08      | 3  | 3  | 3  | 3  | 3  | 2  | 3  | 3  | 3  | 3   | 52.5  | B    |
+| P09      | 4  | 2  | 4  | 2  | 5  | 1  | 5  | 2  | 4  | 2   | 82.5  | B    |
+| P10      | 5  | 1  | 4  | 1  | 4  | 2  | 5  | 2  | 4  | 2   | 85.0  | B    |
 
+Media Caso A (Cafetería Fantasía): 64.0 — Categoría: OK
+Media Caso B (Anime Ramen): 75.5 — Categoría: Good
+El análisis multivariable realizado con sus.mixality.de confirma que Anime Ramen obtiene una valoración claramente superior a Cafetería Fantasía. La diferencia más notable aparece en las preguntas relacionadas con la integración de funciones y la facilidad de aprendizaje, donde Anime Ramen destaca. La puntuación más baja en ambos casos corresponde a los perfiles de mayor edad y menor competencia digital, lo que apunta a oportunidades de mejora en accesibilidad y simplicidad.
 
 ### 4.d A/B Testing
 ![Método UX](img/ABtesting.png) 
 -----
-
->>> Los resultados de un A/B testing con 3 pruebas y 2 casos o alternativas daría como resultado una tabla de 3 filas y 2 columnas, además de un resultado agregado global. Especifique con claridad el resultado: qué caso es más usable, A o B?
+El A/B Testing se realizó comparando Cafetería Fantasía (Caso A) frente a Anime Ramen (Caso B) mediante tres métricas principales:
+| Prueba                        | Caso A (Cafetería Fantasía)         | Caso B (Anime Ramen)                  |
+| ----------------------------- | ----------------------------------- | ------------------------------------- |
+| Puntuación SUS media          | 64.0 (OK)                           | 75.5 (Good)                           |
+| Localización del CTA          | Visible en hero superior            | Visible e inmediata en hero           |
+| Atención visual (Eye Tracking)| Concentrada en hero y carta         | Concentrada en hero y tarjetas        |
 
 ### 4.e Aplicación del método Eye Tracking 
 ![Método UX](img/eye-tracking.png)
