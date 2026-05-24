@@ -351,10 +351,8 @@ El mapa de calor resultante muestra una alta concentración de atención en el h
 ![Método UX](img/usability-report.png) 
 -----
 
->>> Añadir report de usabilidad para práctica B (la de los compañeros) aportando resultados y valoración de cada debilidad de usabilidad. 
->>> Enlazar aqui con el archivo subido a P4/ que indica qué equipo evalua a qué otro equipo.
-
->>> Complementad el Case Study en su Paso 4 con una Valoración personal del equipo sobre esta tarea
+[Usability Report](Usability-Report-template.md)
+[Accessibility Report](Acceibility-Report-template.md)
 
 
 
