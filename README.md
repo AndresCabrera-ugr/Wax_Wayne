@@ -267,26 +267,38 @@ El layout Hi-Fi de la Cafetería de Fantasía Nº17 presenta una interfaz web in
 ![Método UX](img/usability-testing.png)
 -----
 
->>> Breve descripción del caso asignado (llamado Caso-B) con enlace al repositorio Github
->>> Tabla y asignación de personas ficticias (o reales) a las pruebas. Exprese las ideas de posibles situaciones conflictivas de esa persona en las propuestas evaluadas. Mínimo 4 usuarios: asigne 2 al Caso A y 2 al caso B.
+El caso B asignado es Anime Ramen, una web de restaurante temático inspirado en el universo Studio Ghibli. Ofrece cuatro ambientes o "biomas" distintos, cada uno asociado a una película diferente, y permite realizar reservas de mesa online. El repositorio del proyecto está disponible en: https://github.com/JavierRG6/DIU1.HustleHard.git 
 
-
+Para las pruebas se han reclutado 10 usuarios, distribuidos en 5 para el Caso A (Cafetería Fantasía) y 5 para el Caso B (Anime Ramen)
 
 | Usuarios | Sexo/Edad     | Ocupación   |  Exp.TIC    | Personalidad | Plataforma | Caso
 | ------------- | -------- | ----------- | ----------- | -----------  | ---------- | ----
-| User1's name  | H / 18   | Estudiante  | Media       | Introvertido | Web.       | A 
-| User2's name  | H / 18   | Estudiante  | Media       | Timido       | Web        | A 
-| User3's name  | M / 35   | Abogado     | Baja        | Emocional    | móvil      | B 
-| User4's name  | H / 18   | Estudiante  | Media       | Racional     | Web        | B 
+| P01           | H / 20   | Estudiante  | Alta        | Introvertido | Web        | A 
+| P02           | H / 20   | Estudiante  | Media       | Timido       | Web        | A 
+| P03           | M / 21   | Estudiante  | Alta        | Emocional    | Web        | A
+| P04           | H / 17   | Estudiante  | Media       | Racional     | Web        | A 
+| P05           | H / 52   | Empleada    | Baja        | Racional     | Web        | A 
+| P06           | H / 20   | Estudiante  | Alta        | Racional     | Web        | B 
+| P07           | H / 20   | Estudiante  | Media       | Racional     | Web        | B 
+| P08           | H / 77   | Jubilada    | Baja        | Racional     | Web        | B 
+| P09           | H / 52   | Autónomo    | Media       | Racional     | Web        | B 
+| P10           | H / 16   | Estudiante  | Alta        | Racional     | Web        | B 
 
+Situaciones conflictivas identificadas por perfil:
+P05 y P08, con nivel digital bajo, pueden tener dificultades para identificar los elementos interactivos y entender la estructura de navegación. P08 en particular, con 77 años, puede verse especialmente afectada por los problemas de contraste detectados en Anime Ramen. P02, de perfil impaciente, puede abandonar la tarea si el CTA no es inmediatamente visible. P04 y P10, al ser menores de edad, pueden tener expectativas estéticas diferentes a las del público objetivo del restaurante.
 
 ### 4.b Diseño de las pruebas 
 ![Método UX](img/usability-testing.png) 
 -----
+Las pruebas se diseñaron siguiendo un modelo supervisado de entre 5 y 10 minutos por participante. Cada usuario realizó las siguientes tareas sobre el caso asignado:
 
->>> Planifique qué pruebas se van a desarrollar. ¿En qué consisten? ¿Se hará uso del checklist de la P1?
+- Exploración libre de la web durante 2 minutos sin ninguna indicación concreta.
+- Localizar el menú de navegación e identificar las secciones principales.
+- Encontrar el botón de reserva.
+- Identificar las diferentes secciones de la web.
 
-
+Durante la prueba se registró si el participante necesitó ayuda para completar alguna tarea. Las pruebas se realizaron simultáneamente con la captura de Eye Tracking mediante GazeMapping, por lo que los usuarios interactuaban con capturas de pantalla estáticas del sitio mientras la webcam registraba su comportamiento visual.
+Tras la prueba, cada participante rellenó el cuestionario SUS.
 
 ### 4.c Cuestionario SUS
 ![Método UX](img/Survey.png) 
