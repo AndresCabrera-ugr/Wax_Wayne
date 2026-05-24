@@ -336,13 +336,15 @@ El A/B Testing se realizó comparando Cafetería Fantasía (Caso A) frente a Ani
 ![Método UX](img/eye-tracking.png)
 ----
 
->>> Indica cómo se diseña el experimento y se reclutan los usuarios. Explica la herramienta / uso de gazerecorder.com u otra similar. Aplíquese únicamente al caso B.
+El experimento de Eye Tracking se diseñó y ejecutó con GazeMapping. Se capturaron imágenes estáticas de las páginas principales de Anime Ramen mediante la extensión FireShot, y se definieron Puntos de Interés (POI) sobre los elementos clave: botón de reserva, menú de navegación, tarjetas de biomas y sección de propuesta de valor.
+
+Los 5 participantes del Caso B realizaron la sesión de Eye Tracking antes de completar el cuestionario SUS. Tras la calibración de la webcam con 9 puntos, se les pidió que exploraran la web de forma libre y posteriormente que localizaran el botón de reserva.
 
 
 ![experimento](img/experimentoET.png)  
 >>> Cambiar esta img por una de vuestro experimento. El recurso deberá estar subido a la carpeta P4/  
 
->>> gazerecorder en versión de pruebas puede estar limitada a 3 usuarios para generar mapa de calor (crédito > 0 para que funcione) 
+El mapa de calor resultante muestra una alta concentración de atención en el hero superior y el CTA "RESERVAR MESA", con atención equilibrada entre las cuatro tarjetas de biomas. La sección "¿Qué nos hace únicos?" y el footer reciben muy poca atención visual.
 
 
 ### 4.f Usability Report de B
