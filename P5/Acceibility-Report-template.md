@@ -71,10 +71,13 @@ Organiza los errores técnicos de forma que el equipo sepa qué arreglar primero
 
 ## 5. Conclusiones y Declaración de Conformidad
 
-Resume el estado actual:
+El sitio cumple parcialmente con el nivel AA de WCAG 2.1. La puntuación de 88 en Lighthouse refleja una base técnica sólida, pero los dos errores detectados afectan directamente a usuarios con necesidades específicas: el problema de contraste impacta a personas con baja visión, y la ausencia del landmark main dificulta la navegación a usuarios de lectores de pantalla.
+El sitio no puede declararse conforme al nivel AA mientras persistan estos errores, especialmente ACC-01, que afecta a múltiples elementos a lo largo de toda la página.
 
-- **¿Es el sitio accesible?** (Ej: "El sitio cumple parcialmente con el nivel AA, pero presenta barreras críticas en el proceso de compra").
-- **Próximos pasos:** Lista de 3 acciones inmediatas para mejorar la puntuación.
+Próximos pasos inmediatos:
+Corregir el contraste de texto en las tarjetas de biomas y el footer (ACC-01), validando cada combinación de colores con una herramienta de análisis de contraste antes de publicar.
+Añadir la etiqueta <main> al HTML para proporcionar el landmark de contenido principal (ACC-02).
+Realizar una revisión manual de la navegación por teclado para identificar posibles problemas de foco no detectados automáticamente (ACC-03).
 
 
 
