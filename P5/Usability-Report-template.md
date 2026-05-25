@@ -39,7 +39,7 @@ Herramientas utilizadas:
 | P02 | M / 20    | Estudiante | Media    | Impaciente    | Web        | A    |
 | P03 | H / 21    | Estudiante | Alta     | Metódico      | Web        | A    |
 | P04 | M / 17    | Estudiante | Media    | Curiosa       | Web        | A    |
-| P05 | M / 52    | Empleada   | Baja     | Desconfiada   | Web        | A    |
+| P05 | M / 52    | Empleada   | Baja     | Impaciente    | Web        | A    |
 | P06 | H / 20    | Estudiante | Alta     | Explorador    | Web        | B    |
 | P07 | H / 20    | Estudiante | Media    | Directo       | Web        | B    |
 | P08 | M / 77    | Jubilada   | Baja     | Prudente      | Web        | B    |
