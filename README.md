@@ -351,8 +351,8 @@ El mapa de calor resultante muestra una alta concentración de atención en el h
 ![Método UX](img/usability-report.png) 
 -----
 
-[Usability Report](Usability-Report-template.md)
-[Accessibility Report](Acceibility-Report-template.md)
+[Usability Report](P5/Usability-Report-template.md)
+[Accessibility Report](P5/Acceibility-Report-template.md)
 
 
 
