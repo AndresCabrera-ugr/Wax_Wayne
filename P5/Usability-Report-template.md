@@ -21,7 +21,7 @@ En esta evaluación hemos analizado el proyecto de otro equipo aplicando técnic
 - **Metodología:** El estudio combina tres técnicas complementarias. En primer lugar, un A/B Testing entre-sujetos con 10 participantes distribuidos en dos grupos de 5. En segundo lugar, pruebas de Eye Tracking con GazeMapping para analizar el comportamiento visual de los usuarios. Por último, el cuestionario SUS (System Usability Scale) para medir la percepción subjetiva de usabilidad, complementado con una auditoría de accesibilidad mediante Lighthouse.
 - **Principales Hallazgos:**
   - El botón de reserva principal (CTA) de Anime Ramen recibe una atención visual muy alta y está correctamente jerarquizado, lo que facilita la consecución del objetivo principal de la web.
-  - La sección de biblioteca de Cafetería Fantasía es prácticamente ignorada por los usuarios, lo que refleja un problema de jerarquía de contenidos en nuestro propio diseño.
+  - La sección de biblioteca de Cafetería Fantasía es más ignorada por los usuarios, aunque puede deberse a las preguntas formuladas a la hora de realizar la prueba.
   - Anime Ramen presenta problemas de contraste en las tarjetas de los biomas que afectan a usuarios con baja visión, incumpliendo el criterio WCAG 1.4.3.
 - **Resultado Global:** Anime Ramen obtiene una puntuación SUS media de 75.5, lo que lo sitúa en la categoría "Good" de la escala. Cafetería Fantasía obtiene 64.0, en la categoría "OK". Anime Ramen supera a nuestro diseño en usabilidad percibida y se sitúa en el percentil 74 de los sistemas evaluados con SUS a nivel global.
 
